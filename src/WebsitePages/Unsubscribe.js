@@ -1,0 +1,50 @@
+import React, { useState } from "react";
+import "../CSS/Unsubscribe.css";
+
+function UnsubscribeForm() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("allyhaas.com/unsubscribe/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ email }),
+      });
+
+      if (response.ok) {
+        setMessage("UNSUBSCRIBED 🗸");
+      } else {
+        setMessage("FAILED TO UNSUBSCRIBE. VERIFY THAT EMAIL IS CORRECT.");
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
+
+    setEmail("");
+  };
+
+  return (
+    <form className="unsubscribe-form" onSubmit={handleSubmit}>
+      <h1 className="unsubscribe-title">Unsubscribe from Blog Updates</h1>
+      <input
+        className="unsubscribe-input"
+        type="email"
+        placeholder="Enter your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button className="unsubscribe-button" type="submit">
+        Unsubscribe
+      </button>
+      {message && <p className="unsubscribe-message">{message}</p>}
+    </form>
+  );
+}
+
+export default UnsubscribeForm;
