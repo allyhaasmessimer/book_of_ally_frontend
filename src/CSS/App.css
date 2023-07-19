@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
-    width: 10%;
+    width: 10px;
 }
 
 .navbar-title {
@@ -95,4 +95,7 @@ body {
 .nav-link:hover {
     color: var(--third-color);
 
+}
+.nav_logo_img {
+    width: 55px;
 }

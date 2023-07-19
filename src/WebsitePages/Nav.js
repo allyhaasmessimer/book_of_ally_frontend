@@ -14,7 +14,7 @@ function Nav() {
             <nav className="navbar">
                 <div className="navbar-logo">
                     <a href="#home">
-                        <img src={nav_logo} alt="Logo" />
+                        <img src={nav_logo} alt="Logo" className="nav_logo_img" />
                     </a>
                 </div>
                 <div class="navbar-title">
