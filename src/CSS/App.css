@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
+    width: 10%;
 }
 
 .navbar-title {
