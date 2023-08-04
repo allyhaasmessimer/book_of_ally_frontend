@@ -9,7 +9,7 @@ function SubscribeForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch("allyhaas.com/subscribe/", {
+      const response = await fetch("https://book-of-ally-b3cb0c4823d8.herokuapp.com/subscribe/", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function ArchiveList() {
     const [posts, setPosts] = useState([]);
-    const BASE_URL = "allyhaas.com";
+    const BASE_URL = "https://book-of-ally-b3cb0c4823d8.herokuapp.com";
 
     useEffect(() => {
         const fetchData = async () => {

@@ -6,7 +6,7 @@ function PostDetail() {
   const [post, setPost] = useState(null);
   const { slug } = useParams();
 
-  const BASE_URL = "allyhaas.com";
+  const BASE_URL = "https://book-of-ally-b3cb0c4823d8.herokuapp.com";
 
 
   useEffect(() => {

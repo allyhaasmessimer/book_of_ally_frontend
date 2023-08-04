@@ -9,7 +9,7 @@ function UnsubscribeForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch("allyhaas.com/unsubscribe/", {
+      const response = await fetch("https://book-of-ally-b3cb0c4823d8.herokuapp.com/unsubscribe/", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
